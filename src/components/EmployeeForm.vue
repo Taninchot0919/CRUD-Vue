@@ -86,6 +86,7 @@ form {
   margin-bottom: 2rem;
 }
 input {
+  margin-left: 0.5rem;
   margin-bottom: 2rem;
 }
 [class*="-message"] {

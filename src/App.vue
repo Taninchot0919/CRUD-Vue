@@ -1,4 +1,3 @@
-// เรียนถึง 19:00
 
 <template>
   <div id="app">
@@ -8,6 +7,7 @@
     <employee-table
       v-bind:employees="employees"
       @delete:employee="deleteEmployee"
+      @edit:emplotee="editEmployee"
     />
   </div>
 </template>
@@ -47,6 +47,9 @@ export default {
     deleteEmployee(id) {
       this.employees = this.employees.filter((employee) => employee.id !== id);
     },
+    editEmployee(id,updatedEmployee){
+      this.employees = this.employees.map(employee => employee.id == id ? updatedEmployee : employee)
+    }
   },
 };
 </script>
